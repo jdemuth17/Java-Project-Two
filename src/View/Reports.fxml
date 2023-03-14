@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="711.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportsController">
+   <children>
+      <Label layoutX="362.0" layoutY="14.0" prefHeight="70.0" prefWidth="187.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="BackButton" layoutX="761.0" layoutY="658.0" mnemonicParsing="false" onAction="#OnactionBackButton" prefHeight="26.0" prefWidth="114.0" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="SelectContact" layoutX="725.0" layoutY="98.0" onAction="#OnActionSelectContact" prefHeight="33.0" prefWidth="150.0" promptText="Select a Contact" />
+      <TableView fx:id="ContactScheduleTable" layoutX="36.0" layoutY="146.0" prefHeight="238.0" prefWidth="840.0">
+        <columns>
+          <TableColumn fx:id="AppointmentID_Col" maxWidth="120.0" minWidth="120.0" prefWidth="107.99998474121094" text="Appointment ID" />
+          <TableColumn fx:id="Title_Col" maxWidth="120.0" minWidth="120.0" prefWidth="114.4000244140625" text="Title" />
+            <TableColumn fx:id="Type_Col" maxWidth="120.0" minWidth="120.0" prefWidth="130.39996337890625" text="Type" />
+            <TableColumn fx:id="Discription_col" maxWidth="120.0" minWidth="120.0" prefWidth="125.5999755859375" text="Discription" />
+            <TableColumn fx:id="Start_Col" maxWidth="120.0" minWidth="120.0" prefWidth="78.4000244140625" text="Start" />
+            <TableColumn fx:id="End_Col" maxWidth="120.0" minWidth="120.0" prefWidth="135.2000732421875" text="End" />
+            <TableColumn fx:id="CustomerID_Col" maxWidth="120.0" minWidth="120.0" prefWidth="134.39990234375" text="Customer ID" />
+        </columns>
+      </TableView>
+      <TableView fx:id="ApptByMonthTable" layoutX="477.0" layoutY="441.0" prefHeight="200.0" prefWidth="399.0">
+        <columns>
+          <TableColumn fx:id="Month_Col" maxWidth="133.0" minWidth="133.0" prefWidth="144.79998779296875" text="Month" />
+          <TableColumn fx:id="Type_Month_Col" maxWidth="133.0" minWidth="133.0" prefWidth="126.39996337890625" text="Type" />
+            <TableColumn fx:id="Number_Col" maxWidth="133.0" minWidth="133.0" prefWidth="123.20013427734375" text="Number" />
+        </columns>
+      </TableView>
+      <TableView fx:id="CustomerByCountryTable" layoutX="36.0" layoutY="441.0" prefHeight="200.0" prefWidth="399.0">
+        <columns>
+          <TableColumn fx:id="Customer_Col" maxWidth="133.0" minWidth="133.0" prefWidth="134.40000915527344" text="Customer" />
+          <TableColumn fx:id="Country_Col" maxWidth="133.0" minWidth="133.0" prefWidth="116.0" text="Country" />
+            <TableColumn fx:id="Division_Col" maxWidth="133.0" minWidth="133.0" prefWidth="150.39999999999998" text="Division" />
+        </columns>
+      </TableView>
+      <Label layoutX="36.0" layoutY="97.0" prefHeight="34.0" prefWidth="158.0" text="Contact Schedule">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="401.0" prefHeight="26.0" prefWidth="150.0" text="Customers By Country">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="477.0" layoutY="401.0" prefHeight="26.0" prefWidth="200.0" text="Appointment type by month">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="SelectMonth" layoutX="725.0" layoutY="401.0" onAction="#OnActionSelectMonth" prefHeight="26.0" prefWidth="150.0" promptText="Select a month" />
+      <ComboBox fx:id="SelectCountry" layoutX="287.0" layoutY="401.0" onAction="#OnActionSelectCountry" prefHeight="26.0" prefWidth="150.0" promptText="Select a Country" />
+   </children>
+</AnchorPane>

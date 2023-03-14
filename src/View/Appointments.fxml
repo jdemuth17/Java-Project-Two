@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="750.0" minWidth="1082.0" prefHeight="717.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AppointmentsController">
+   <children>
+      <TableView fx:id="AppointmentsTable" layoutX="14.0" layoutY="64.0" prefHeight="255.0" prefWidth="1054.0">
+         <columns>
+            <TableColumn fx:id="APPT_ID_COL" minWidth="100.0" prefWidth="98.39998948574066" text="Appointment ID" />
+            <TableColumn fx:id="TITLE_COL" minWidth="50.0" prefWidth="62.40003204345703" text="Title" />
+            <TableColumn fx:id="DESC_COL" maxWidth="152.0" minWidth="85.59999084472656" prefWidth="215.20001220703125" text="Description" />
+            <TableColumn fx:id="LOCATION_COL" maxWidth="175.0" prefWidth="107.20001220703125" text="Location" />
+            <TableColumn fx:id="CONTACT_COL" maxWidth="100.0" prefWidth="65.60003662109375" text="Contact" />
+            <TableColumn fx:id="TYPE_COL" maxWidth="100.0" prefWidth="65.60003662109375" text="Type" />
+            <TableColumn fx:id="STARTDATE_COL" maxWidth="150.0" minWidth="150.0" prefWidth="65.60003662109375" text="Start Date and Time" />
+            <TableColumn fx:id="ENDDATE_COL" maxWidth="150.0" minWidth="113.5999755859375" prefWidth="147.199951171875" text="End Date and Time" />
+            <TableColumn fx:id="CUSTOMER_ID_COL" maxWidth="100.0" minWidth="100.0" prefWidth="103.2000732421875" text="Customer_ID" />
+            <TableColumn fx:id="USER_ID_COL" maxWidth="100.0" minWidth="100.0" prefWidth="86.39996337890625" text="User_ID" />
+         </columns>
+      </TableView>
+      <Label layoutX="15.0" layoutY="6.0" prefHeight="42.0" prefWidth="165.0" text="Appointments">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="15.0" layoutY="344.0" prefHeight="339.0" prefWidth="329.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.00000610351563" minHeight="10.0" prefHeight="26.79999389648438" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="37.199987792968756" minHeight="10.0" prefHeight="30.00000610351563" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" text="Appointment ID" />
+            <Label text="Title" GridPane.rowIndex="1" />
+            <Label text="Description" GridPane.rowIndex="2" />
+            <Label text="Location" GridPane.rowIndex="3" />
+            <Label text="Contact" GridPane.rowIndex="4" />
+            <Label text="Type" GridPane.rowIndex="5" />
+            <Label text=" Date " GridPane.rowIndex="6" />
+            <Label text="End Time" GridPane.rowIndex="8" />
+            <Label text="Customer_ID" GridPane.rowIndex="9" />
+            <Label text="User_ID" GridPane.rowIndex="10" />
+            <TextField fx:id="AppID" editable="false" promptText="Auto Generated" GridPane.columnIndex="1" />
+            <TextField fx:id="Appt_Title" promptText="Title" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="Appt_Description" promptText="Description" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="Appt_Type" promptText="Type" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ComboBox fx:id="Appt_Customer_ID" prefHeight="26.0" prefWidth="179.0" promptText="Select Customer ID" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <ComboBox fx:id="Appt_UserID" prefHeight="26.0" prefWidth="176.0" promptText="Select a User" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <ComboBox fx:id="Appt_Contact" prefHeight="26.0" prefWidth="170.0" promptText="Select Contact" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="Appt_Location" prefHeight="26.0" prefWidth="172.0" promptText="Select Location" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="Appt_Date" promptText="Select a Date" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Start Time" GridPane.rowIndex="7" />
+            <ComboBox fx:id="Appt_StartTime" prefHeight="26.0" prefWidth="174.0" promptText="Select a Time" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <ComboBox fx:id="Appt_EndTime" prefHeight="26.0" prefWidth="170.0" promptText="Select a Time" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
+      <Button fx:id="Add_Appt" layoutX="394.0" layoutY="619.0" mnemonicParsing="false" onAction="#OnActionAdd_Appt" prefHeight="30.0" prefWidth="172.0" text="Add Appointment">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Modify_Appt" layoutX="626.0" layoutY="344.0" mnemonicParsing="false" onAction="#OnAction_Modify_Appt" prefHeight="26.0" prefWidth="178.0" text="Select Appointment">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Customer_Scene" layoutX="856.0" layoutY="604.0" mnemonicParsing="false" onAction="#OnActionCustomer_Scene" prefHeight="30.0" prefWidth="178.0" text="Customers">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="LogOut" layoutX="635.0" layoutY="662.0" mnemonicParsing="false" onAction="#OnActionLogOut" prefHeight="26.0" prefWidth="178.0" text="Log Out">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Delete_Appt" layoutX="856.0" layoutY="345.0" mnemonicParsing="false" onAction="#OnActionDelete_Appt" prefHeight="26.0" prefWidth="178.0" text="Delete Appointment">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Exit" layoutX="856.0" layoutY="662.0" mnemonicParsing="false" onAction="#OnActionExit" prefHeight="26.0" prefWidth="178.0" text="Exit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Clear" layoutX="394.0" layoutY="662.0" mnemonicParsing="false" onAction="#OnActionClear" prefHeight="30.0" prefWidth="172.0" text="Clear Selections">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="FilterbyMonth" layoutX="813.0" layoutY="27.0" mnemonicParsing="false" onAction="#OnActionFilterbyMonth" text="Filter by Month">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="filter" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="FilterbyWeek" layoutX="956.0" layoutY="27.0" mnemonicParsing="false" onAction="#OnActionFilterbyWeek" text="Filter by Week" toggleGroup="$filter">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="All_Appointments" layoutX="660.0" layoutY="27.0" mnemonicParsing="false" onAction="#OnActionAll_Appointments" selected="true" text="All Appointments" toggleGroup="$filter">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <TextArea fx:id="AlertsArea" editable="false" layoutX="383.0" layoutY="410.0" prefHeight="152.0" prefWidth="640.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="Reportsbutton" layoutX="635.0" layoutY="604.0" mnemonicParsing="false" onAction="#OnActionReportsbutton" prefHeight="30.0" prefWidth="178.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
